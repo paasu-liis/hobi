@@ -1,5 +1,227 @@
+/* Üldine margin kogu lehe jaoks */
+body {
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 0 20px;
+    font-family: Arial, sans-serif;
+}
 
-  
-  
+/* Päise stiilid */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #727272;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigeerimine */
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #FFD700;
+}
+
+/* Nupud */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sign-up {
+    background-color: #fffcf6;
+    color: black;
+}
+
+.sign-up:hover {
+    background-color: #F9F292;
+    color: black;
+}
+
+.log-in {
+    background-color: #fffcf6;
+    color: black;
+}
+
+.log-in:hover {
+    background-color: #F9F292;
+    color: black;
+}
+
+/* Hero-section */
+.hero-section {
+    text-align: left;
+    padding: 250px 20px;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section .content {
+    width: 66.67%; /* Tekst ulatub 2/3 kasti laiusest */
+    text-align: left;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.sign-up-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sign-up-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Üldine sektsiooni stiil */
+.meal-section {
+    margin-bottom: 40px; /* Ruumi sektsioonide vahele */
+    text-align: center;
+}
+
+.meal-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Info-boxes */
+.info-boxes {
+    display: flex;
+    justify-content: space-between; /* Kastide ühtlane jaotus */
+    gap: 20px; /* Ruumi kastide vahel */
+    flex-wrap: wrap; /* Väiksematel ekraanidel kastid murduvad järgmisele reale */
+}
+
+.info-box {
+    flex: 1; /* Kõik kastid võrdselt laiused */
+    max-width: 30%; /* Kastid ei läheks liiga laiaks */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 auto; /* Tsentreerib väiksematel ekraanidel */
+    height: 400px; /* Määrab kasti kõrguse */
+    display: flex;
+    flex-direction: column; /* Paigutab pildi ja teksti vertikaalselt */
+}
+
+.info-img {
+    width: 100%; /* Pilt täidab kasti laiuse */
+    height: 250px; /* Suurem kõrgus pildi jaoks */
+    object-fit: cover; /* Säilitab pildi proportsioonid */
+    border-radius: 10px 10px 0 0; /* Ülemised nurgad ümaraks */
+}
+
+.info-text {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1; /* Täidab ülejäänud ruumi tekstiga */
+}
+
+.info-text h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.info-text p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6; /* Loetavam tekst suuremate kastide jaoks */
+}
+
+/* Health Section */
+.health-section {
+    display: flex; /* Paigutab teksti ja pildi kõrvuti */
+    align-items: center; /* Vertikaalne tsentreerimine */
+    justify-content: space-between; /* Ruumi jagamine vasakule ja paremale */
+    padding: 40px 20px;
+    margin-top: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 20px; /* Lisab ruumi teksti ja pildi vahel */
+}
+
+/* Teksti stiilid */
+.text-content {
+    flex: 1; /* Tekstiosa võtab 50% sektsiooni laiust */
+    max-width: 50%; /* Tagab, et tekst ei ületa poole laiust */
+    text-align: left;
+}
+
+.text-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Pildi stiilid */
+.image-content {
+    flex: 1; /* Pildiosa võtab ülejäänud 50% sektsiooni laiust */
+    max-width: 50%;
+}
+
+.health-image {
+    width: 100%; /* Pilt täidab pildiala */
+    height: auto; /* Säilitab pildi proportsioonid */
+    border-radius: 10px;
+    object-fit: cover; /* Hoiab pildi ilusa ja täpsena */
+}
