@@ -1,9 +1,24 @@
 /* Üldine margin kogu lehe jaoks */
 body {
-        margin: 0 auto;
-        max-width: 1200px;
-        padding: 0 20px;
-    font-family: Arial, sans-serif;
+    margin: 0 auto; /* Keskendab sisu horisontaalselt */
+    padding: 0 20px; /* Lisab sisemised ääred */
+    background-color: #f5f5dc; /* Beež taust */
+    color: #333; /* Tumedam tekstivärv */
+    font-family: 'Lora', serif; /* Üldine font kogu lehele */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lora', serif; /* Kasuta pealkirjades sama fonti */
+}
+
+h1 {
+    text-align: center; /* Keskendab pealkirjad */
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 /* Päise stiilid */
@@ -11,34 +26,36 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #727272;
+    background-color: beige;
     padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
 }
 
 /* Logo */
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: white;
+    color: black;
+    margin-right: 40px; /* Lisab vahe logo ja navigeerimise vahel */
 }
 
 /* Navigeerimine */
 .nav {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
 }
 
 .nav a {
     text-decoration: none;
     font-size: 16px;
-    color: white;
+    color: black;
     transition: color 0.3s ease;
+    padding-right: 40px;
 }
 
 .nav a:hover {
-    color: #FFD700;
+    color: #999999;
 }
 
 /* Nupud */
@@ -78,37 +95,41 @@ button {
 
 /* Hero-section */
 .hero-section {
-    text-align: left;
+    text-align: center;
+    width: 100%;
     padding: 250px 20px;
-    margin-top: 10px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 0px;
+    background: url(img/taust.jpg) no-repeat center center/cover; /* Taustapilt */
+    color: #fff; /* Muudab teksti valgeks, et see paistaks tumedal taustal */
 }
 
+/* Sisu paigutus */
 .hero-section .content {
-    width: 66.67%; /* Tekst ulatub 2/3 kasti laiusest */
-    text-align: left;
+    text-align: center;
+    max-width: 600px; /* Maksimaalne laius tekstile */
+    margin: 0 auto; /* Keskendab teksti */
 }
 
 .hero-section h1 {
     font-size: 36px;
     font-weight: bold;
-    color: #4CAF50;
+    color: #ffffff; /* Pealkirja värv */
     margin-bottom: 10px;
 }
 
 .hero-section p {
     font-size: 18px;
-    color: #555;
+    color: #f0f0f0; /* Teksti värv */
     margin-bottom: 20px;
+    line-height: 1.6; /* Tekstile parem loetavus */
 }
 
+/* Nupp */
 .sign-up-button {
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    background-color: #4CAF50;
+    background-color: #667a66;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -120,16 +141,24 @@ button {
     transform: scale(1.05);
 }
 
+
+
 /* Üldine sektsiooni stiil */
 .meal-section {
     margin-bottom: 40px; /* Ruumi sektsioonide vahele */
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px; /* Määrab maksimaalse laiuse */
+    width: 100%;
 }
 
 .meal-section h2 {
     font-size: 24px;
     font-weight: bold;
-    color: #4CAF50;
+    color: black;
     margin-bottom: 20px;
 }
 
@@ -139,16 +168,18 @@ button {
     justify-content: space-between; /* Kastide ühtlane jaotus */
     gap: 20px; /* Ruumi kastide vahel */
     flex-wrap: wrap; /* Väiksematel ekraanidel kastid murduvad järgmisele reale */
+    max-width: 1200px;
+    width: 100%;
 }
 
 .info-box {
     flex: 1; /* Kõik kastid võrdselt laiused */
-    max-width: 30%; /* Kastid ei läheks liiga laiaks */
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     margin: 0 auto; /* Tsentreerib väiksematel ekraanidel */
+    width: 250px;
     height: 400px; /* Määrab kasti kõrguse */
     display: flex;
     flex-direction: column; /* Paigutab pildi ja teksti vertikaalselt */
@@ -171,8 +202,9 @@ button {
     font-size: 18px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 10px;
+    margin: 3px 0 3px; /* Väiksem ülemine ja alumine vahe */
 }
+
 
 .info-text p {
     font-size: 14px;
@@ -180,17 +212,25 @@ button {
     line-height: 1.6; /* Loetavam tekst suuremate kastide jaoks */
 }
 
+/* Tärnide stiilid */
+.rating {
+    font-size: 16px; /* Tärnide suurus */
+    color: #FFD700; /* Tärnide kuldne värv */
+    margin: 5px 0; /* Vahe tärnide ja teksti vahel */
+}
+
+
 /* Health Section */
 .health-section {
     display: flex; /* Paigutab teksti ja pildi kõrvuti */
     align-items: center; /* Vertikaalne tsentreerimine */
     justify-content: space-between; /* Ruumi jagamine vasakule ja paremale */
-    padding: 40px 20px;
+    padding: 40px;
     margin-top: 40px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: beige;
     gap: 20px; /* Lisab ruumi teksti ja pildi vahel */
+    max-width: 1200px;
+    width: 100%;
 }
 
 /* Teksti stiilid */
@@ -203,7 +243,7 @@ button {
 .text-content h2 {
     font-size: 24px;
     font-weight: bold;
-    color: #4CAF50;
+    color: #000000;
     margin-bottom: 20px;
 }
 
@@ -215,13 +255,129 @@ button {
 
 /* Pildi stiilid */
 .image-content {
-    flex: 1; /* Pildiosa võtab ülejäänud 50% sektsiooni laiust */
-    max-width: 50%;
+    flex: 1; /* Pildiosa võtab 50% sektsiooni laiust */
+    max-width: 50%; /* Piirab pildi maksimaalse laiuse */
+    display: flex; /* Lisatud paindlik paigutus */
+    justify-content: center; /* Keskendab pildi sees */
+    align-items: center; /* Keskendab pildi sees */
 }
 
 .health-image {
-    width: 100%; /* Pilt täidab pildiala */
+    max-width: 300px; /* Piirab pildi maksimaalse laiuse 300px */
     height: auto; /* Säilitab pildi proportsioonid */
     border-radius: 10px;
     object-fit: cover; /* Hoiab pildi ilusa ja täpsena */
+}
+
+/* Arvustuste sektsioon */
+.reviews-section {
+    display: flex; /* Paigutab kastid horisontaalselt */
+    flex-wrap: wrap; /* Lubab kastidel murduda järgmisele reale väiksematel ekraanidel */
+    gap: 20px; /* Ruumi kastide vahel */
+    max-width: 1200px; /* Sektsiooni maksimaalne laius */
+    width: 100%; /* Täidab saadaval oleva laiuse */
+    margin: 0 auto; /* Keskendab sektsiooni ekraani keskele */
+    justify-content: space-between; /* Jaotab kastid ühtlaselt rea peale */
+}
+
+/* Üksik arvustuse kast */
+.review-box {
+    flex: 1; /* Kõik kastid võtavad võrdse osa */
+    max-width: calc(33.33% - 20px); /* Kolm kasti reasse, arvestades vahe */
+    min-width: 300px; /* Määrab kastide minimaalse laiuse */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Tsentreerib sisu vertikaalselt */
+    text-align: left; /* Joondab teksti vasakule */
+}
+
+/* Pilt */
+.review-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Ümmargune pilt */
+    object-fit: cover; /* Säilitab pildi proportsioonid */
+    margin-right: 15px; /* Vahe pildi ja teksti vahel */
+}
+
+/* Teksti sisu */
+.review-content {
+    flex: 1; /* Täidab ülejäänud ruumi kastis */
+}
+
+.review-content h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Tärnid */
+.rating {
+    font-size: 14px; /* Väiksemad tärnid */
+    color: #FFD700; /* Kuldne tärnide värv */
+    margin-bottom: 5px;
+}
+
+/* Kirjeldus */
+.review-content p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+
+
+/* Jaluse üldised stiilid */
+.footer {
+    margin-top: 40px; /* Lisab ruumi jaluse ja eelmise sisu vahele */
+    padding: 10px 20px; /* Väiksem padding, et jalus oleks madalam */
+    background-color: beige; /* Kergelt hall taust */
+    border-top: 1px solid #ddd; /* Peenike joon jaluse ülaosas */
+    color: black; /* Jaluse tekstivärv */
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+}
+/* Jaluse ülemine osa */
+.footer-top {
+    display: flex;
+    justify-content: space-between; /* Vasak ja parem sisu jaotatud */
+    align-items: center; /* Vertikaalne tsentreerimine */
+    margin-bottom: 10px; /* Väiksem vertikaalne vahe */
+}
+
+/* Logo */
+.footer-logo h3 {
+    margin: 0;
+    font-size: 24px; /* Logo suurus jääb samaks */
+    font-weight: bold;
+}
+
+/* Sotsiaalmeedia ikoonid */
+.footer-social {
+    display: flex;
+    gap: 10px; /* Väiksem vahe ikoonide vahel */
+}
+
+.social-link {
+    color: rgb(0, 0, 0); /* Must värv ikoonidele */
+    font-size: 16px; /* Väiksemad ikoonid */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+/* Jaluse alumine osa */
+.footer-bottom {
+    font-size: 5px; /* Väiksem tekst autoriõiguste jaoks */
+    margin-top: 5px; /* Väiksem vahe ülemise osa ja autoriõiguste vahel */
+    color: #d6d6d6; /* Must tekst */
+    text-align: center; /* Keskendab autoriõiguste teksti */
 }
