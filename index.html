@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 </head>
 <body>
     <header class="header">
         <div class="logo">TTT</div>
         <nav class="nav">
-            <a href="#avaleht">Avaleht</a>
-            <a href="#toidud">Toidud</a>
-            <a href="#miks-tervislik">Miks Tervislik</a>
-            <a href="#arvustused">Arvustused</a>
+            <a href="#meals">Toidud</a>
+            <a href="#helth-benefits">Miks olla tervislik?</a>
+            <a href="#reviews">Arvustused</a>
         </nav>
         <div class="buttons">
             <button class="sign-up">Sign Up</button>
@@ -33,37 +33,40 @@
 </div>
 
     <!-- Esimene sektsioon: Hommikusöök -->
-<div class="meal-section">
+<div id="meals" class="meal-section">
     <h2>Hommikusöök</h2>
     <div class="info-boxes">
         <div class="info-box">
             <img src="img/pošeeritudmunad.jpeg" alt="Puder" class="info-img">
             <div class="info-text">
-                <h3>Puder</h3>
+                <h3>Pošeeritud munad kastmes</h3>
                 <div class="rating">
                     ★★★★☆
                 </div>
-                <p>Maitsev kaerahelbepuder marjadega.</p>
+                <p>Kiirelt valmivad munad koos hõrgu kastmega.</p>
+                <p>Aeg: 5min</p>
             </div>
         </div>
         <div class="info-box">
             <img src="img/mitmekülgsedvõikud.jpeg" alt="Omlett" class="info-img">
             <div class="info-text">
-                <h3>Omlett</h3>
+                <h3>Mitmekülgsed võikud</h3>
                 <div class="rating">
                     ★★★★☆
                 </div>
-                <p>Proteiinirikas omlett juustuga.</p>
+                <p>Söö hommikuks nii magusat, kui soolast!</p>
+                <p>Aeg: 3min</p>
             </div>
         </div>
         <div class="info-box">
             <img src="img/tatrapannkoogid.jpeg" alt="Smooti" class="info-img">
             <div class="info-text">
-                <h3>Smooti</h3>
+                <h3>Kaerahelbe pannkoogid</h3>
                 <div class="rating">
                     ★★★★★
                 </div>
-                <p>Vitamiinidest tulvil puuviljasmuuti.</p>
+                <p>Toitvad pannkoogid värskete marjadega</p>
+                <p>Aeg: 7min</p>
             </div>
         </div>
     </div>
@@ -77,31 +80,34 @@
             <div class="info-box">
                 <img src="img/roog.jpg" alt="Salat" class="info-img">
                 <div class="info-text">
-                    <h3>Salat</h3>
+                    <h3>Kõrobekana kauss</h3>
                     <div class="rating">
                         ★★★★☆
                     </div>
-                    <p>Tervislik salat värskete köögiviljadega.</p>
+                    <p>Toitev ning mitmekülgne maitselamus.</p>
+                    <p>Aeg: 6min</p>
                 </div>
             </div>
             <div class="info-box">
                 <img src="img/munaroog.jpg" alt="Grillkana" class="info-img">
                 <div class="info-text">
-                    <h3>Grillkana</h3>
+                    <h3>Munapasta</h3>
                     <div class="rating">
                         ★★★★☆
                     </div>
-                    <p>Mahlane grillkana vürtsika marinaadiga.</p>
+                    <p>Siidine ja kreemias munapasta.</p>
+                    <p>Aeg: 10min</p>
                 </div>
             </div>
             <div class="info-box">
                 <img src="img/kana1.jpg" alt="Supp" class="info-img">
                 <div class="info-text">
-                    <h3>Supp</h3>
+                    <h3>Kanasalat</h3>
                     <div class="rating">
                         ★★★☆☆
                     </div>
-                    <p>Kreemine köögiviljasupp krutoonidega.</p>
+                    <p>Salat krõmpsuva köögivilja ja värske kastmega.</p>
+                    <p>Aeg: 15min</p>
                 </div>
             </div>
         </div>
@@ -114,38 +120,42 @@
             <div class="info-box">
                 <img src="img/magustoit1.jpg" alt="Jäätis" class="info-img">
                 <div class="info-text">
-                    <h3>Jäätis</h3>
+                    <h3>Aprikoosi võikud</h3>
                     <div class="rating">
                         ★★★★★
                     </div>
-                    <p>Kreemine vanillijäätis šokolaadikastmega.</p>
+                    <p>Võised aprikoosivõikud - magus ja pehme täius.</p>
+                    <p>Aeg: 3min</p>
                 </div>
             </div>
             <div class="info-box">
                 <img src="img/magustoit3.jpg" alt="Kook" class="info-img">
                 <div class="info-text">
-                    <h3>Kook</h3>
+                    <h3>Vanillipuding</h3>
                     <div class="rating">
                         ★★★★☆
                     </div>
-                    <p>Šokolaadikook vaarikatega.</p>
+                    <p>Lihtne, kuid vastupandamatult hea.</p>
+                    <p>Aeg: 2min</p>
                 </div>
             </div>
             <div class="info-box">
                 <img src="img/magustoit2.jpg" alt="Pannkoogid" class="info-img">
                 <div class="info-text">
-                    <h3>Pannkoogid</h3>
+                    <h3>Kohupiimakook jäätisega</h3>
                     <div class="rating">
                         ★★★★★
                     </div>
-                    <p>Õhulised pannkoogid moosi ja vahukoorega.</p>
+                    <p>Soe kohupiimakook ja suav jäätis - täiuslik kooslus.</p>
+                    <p>Aeg: 15min</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="health-section">
+<!-- Miks tervislik? -->
+<div id="helth-benefits" class="health-section">
     <div class="text-content">
         <h2>Tervisliku toitumise kasulikkus</h2>
         <p>
@@ -159,29 +169,29 @@
 
 <!-- ARVUSTUSED -->
 
-<div class="reviews-section">
-    <div class="review-box">
-        <img src="img/naine.jpeg" alt="Inimese pilt" class="review-img">
-        <div class="review-content">
-            <h3>Maria</h3>
-            <div class="rating">★★★★★</div>
-            <p>Valmistasin maitsva kaerahelbepudru.</p>
-        </div>
-    </div>
-    <div class="review-box">
-        <img src="img/naine.jpeg" alt="Inimese pilt" class="review-img">
-        <div class="review-content">
-            <h3>Peeter</h3>
-            <div class="rating">★★★★★</div>
-            <p>Tegin suurepärase omleti.</p>
-        </div>
-    </div>
+<div id="reviews" class="reviews-section">
     <div class="review-box">
         <img src="img/naine.jpeg" alt="Inimese pilt" class="review-img">
         <div class="review-content">
             <h3>Laura</h3>
             <div class="rating">★★★★★</div>
-            <p>Valmistasin õhulised tatrapannkoogid.</p>
+            <p>Valmistasin õhtuks munapasta ja see oli võrratu.</p>
+        </div>
+    </div>
+    <div class="review-box">
+        <img src="img/mees.jpg" alt="Inimese pilt" class="review-img">
+        <div class="review-content">
+            <h3>Peeter</h3>
+            <div class="rating">★★★★★</div>
+            <p>Tegin hommikuks suurepärase omleti ja kõht oli lõunani täis.</p>
+        </div>
+    </div>
+    <div class="review-box">
+        <img src="img/naine2.jpg" alt="Inimese pilt" class="review-img">
+        <div class="review-content">
+            <h3>Maria</h3>
+            <div class="rating">★★★★★</div>
+            <p>Tegin hommikuks pošeeritud munasid ja need olid niii maitvad.</p>
         </div>
     </div>
 </div>

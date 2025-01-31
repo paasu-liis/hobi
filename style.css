@@ -1,19 +1,19 @@
 /* Üldine margin kogu lehe jaoks */
 body {
-    margin: 0 auto; /* Keskendab sisu horisontaalselt */
-    padding: 0 20px; /* Lisab sisemised ääred */
-    background-color: #f5f5dc; /* Beež taust */
-    color: #333; /* Tumedam tekstivärv */
-    font-family: 'Lora', serif; /* Üldine font kogu lehele */
+    margin: 0 auto; 
+    padding: 0 20px; 
+    background-color: #f5f5dc; 
+    color: #333; 
+    font-family: 'Lora', serif; 
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-family: 'Lora', serif; /* Kasuta pealkirjades sama fonti */
+    font-family: 'Lora', serif; 
 }
 
 h1 {
-    text-align: center; /* Keskendab pealkirjad */
+    text-align: center; 
 }
 
 p {
@@ -37,7 +37,7 @@ p {
     font-size: 24px;
     font-weight: bold;
     color: black;
-    margin-right: 40px; /* Lisab vahe logo ja navigeerimise vahel */
+    margin-right: 40px; 
 }
 
 /* Navigeerimine */
@@ -100,7 +100,7 @@ button {
     padding: 250px 20px;
     margin-top: 0px;
     background: url(img/taust.jpg) no-repeat center center/cover; /* Taustapilt */
-    color: #fff; /* Muudab teksti valgeks, et see paistaks tumedal taustal */
+    color: #fff; 
 }
 
 /* Sisu paigutus */
@@ -195,7 +195,7 @@ button {
 .info-text {
     padding: 15px;
     text-align: center;
-    flex-grow: 1; /* Täidab ülejäänud ruumi tekstiga */
+    flex-grow: 1;
 }
 
 .info-text h3 {
@@ -226,11 +226,12 @@ button {
     align-items: center; /* Vertikaalne tsentreerimine */
     justify-content: space-between; /* Ruumi jagamine vasakule ja paremale */
     padding: 40px;
-    margin-top: 40px;
+    margin-top: 20px;
     background-color: beige;
     gap: 20px; /* Lisab ruumi teksti ja pildi vahel */
     max-width: 1200px;
     width: 100%;
+    margin-bottom: 60px; /* Suurem vahe enne arvustusi */
 }
 
 /* Teksti stiilid */
@@ -258,8 +259,8 @@ button {
     flex: 1; /* Pildiosa võtab 50% sektsiooni laiust */
     max-width: 50%; /* Piirab pildi maksimaalse laiuse */
     display: flex; /* Lisatud paindlik paigutus */
-    justify-content: center; /* Keskendab pildi sees */
-    align-items: center; /* Keskendab pildi sees */
+    justify-content: center; 
+    align-items: center; 
 }
 
 .health-image {
@@ -365,7 +366,7 @@ button {
 
 .social-link {
     color: rgb(0, 0, 0); /* Must värv ikoonidele */
-    font-size: 16px; /* Väiksemad ikoonid */
+    font-size: 20px; 
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -380,4 +381,71 @@ button {
     margin-top: 5px; /* Väiksem vahe ülemise osa ja autoriõiguste vahel */
     color: #d6d6d6; /* Must tekst */
     text-align: center; /* Keskendab autoriõiguste teksti */
+}
+
+/* Väiksemad ekraanid (telefonid alla 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0 10px; /* Vähenda sisu ääriseid väiksematel ekraanidel */
+    }
+
+    .header {
+        flex-direction: column; /* Muudab päise vertikaalseks */
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav {
+        flex-direction: column; /* Muudab navigeerimise vertikaalseks */
+        gap: 10px; /* Lisab vahe navigeerimislinkide vahele */
+    }
+
+    .buttons {
+        flex-direction: column; /* Muudab nupud vertikaalseks */
+        width: 100%;
+    }
+
+    .hero-section {
+        padding: 150px 20px; /* Vähenda hero-sektsiooni kõrgust */
+    }
+
+    .meal-section {
+        flex-direction: column; /* Muudab paigutuse vertikaalseks */
+        text-align: center;
+    }
+
+    .info-boxes {
+        flex-direction: column; /* Muudab kastid vertikaalseks */
+        align-items: center; /* Tsentreerib */
+    }
+
+    .info-box {
+        width: 100%; /* Muudab kastid täislaiuseks */
+        max-width: 300px;
+    }
+
+    .health-section {
+        flex-direction: column; /* Muudab paigutuse vertikaalseks */
+        text-align: center;
+        gap: 10px;
+    }
+
+    .text-content, .image-content {
+        max-width: 100%; /* Muudab sektsioonid täislaiuseks */
+    }
+
+    .reviews-section {
+        flex-direction: column; /* Muudab paigutuse vertikaalseks */
+        align-items: center; /* Tsentreerib */
+    }
+
+    .review-box {
+        max-width: 100%; /* Muudab kastid täislaiuseks */
+    }
+
+    .footer-top {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
 }
